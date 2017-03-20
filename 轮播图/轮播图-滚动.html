@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>轮播图-无缝滚动</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            width: 680px;
+            height: 382px;
+            margin: 100px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        #content{
+            width: 2720px;
+            height: 382px;
+            position: absolute;
+            left: 0;
+        }
+        #content img{
+            float: left;
+        }
+        #tab{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        #arrows{
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+        #tab li,#arrows span{
+            width: 20px;
+            height: 20px;
+            background: #000;
+            color: #ffffff;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+            margin-right: 5px;
+            float: left;
+        }
+        #tab li.selected{
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <img src="image/1.jpg" alt=""/>
+            <img src="image/2.jpg" alt=""/>
+            <img src="image/3.jpg" alt=""/>
+            <img src="image/4.jpg" alt=""/>
+        </div>
+        <ul id="tab">
+            <li class="selected" onselectstart="return false;">1</li>
+            <li onselectstart="return false;">2</li>
+            <li onselectstart="return false;">3</li>
+            <li onselectstart="return false;">4</li>
+        </ul>
+        <div id="arrows">
+            <span id="prev" onselectstart="return false;">&lt;</span>
+            <span id="next" onselectstart="return false;">&gt;</span>
+        </div>
+    </div>
+    <script src="jslib.js"></script>
+    <script>
+        var oContainer = document.getElementById("container");
+        var oTab = document.getElementById("tab");
+        var aLi = oTab.getElementsByTagName("li");
+        var oContent = document.getElementById("content");
+        var aImg = oContent.getElementsByTagName("img");
+        var iImgWidth = aImg[0].offsetWidth;
+        var oPrev = document.getElementById("prev");
+        var oNext = document.getElementById("next");
+        var iNow = 0;
+
+        oContent.appendChild(aImg[0].cloneNode());
+        oContent.style.width = iImgWidth * aImg.length + "px";
+
+        for(var i=0; i<aLi.length; i++){
+            aLi[i].index = i;
+            aLi[i].onmouseover = function(){
+                changeImg(this.index);
+            };
+        }
+        oPrev.onclick = oNext.onclick = function(){
+            if(this == oPrev){
+                iNow--;
+                if(iNow == -1){
+                    iNow = aImg.length - 2;
+                    oContent.style.left = -(aImg.length - 1) * iImgWidth +  "px";
+                }
+                changeImg(iNow);
+            }else{//next
+                iNow++;
+                if(iNow == aImg.length){
+                    iNow = 1;
+                    oContent.style.left = 0;
+                }
+                changeImg(iNow);
+            }
+        };
+
+        var timer;
+        function run(){
+            timer = setInterval(function(){
+                oNext.onclick();
+            }, 1000);
+        }
+        run();
+
+        oContainer.onmouseover = function(){
+            clearInterval(timer);
+        };
+        oContainer.onmouseout = function(){
+            run();
+        };
+
+        function changeImg(index){
+            iNow = index;
+            for(var j=0; j<aLi.length; j++){
+                aLi[j].className = "";
+            }
+            aLi[iNow == aLi.length? 0 : iNow].className = "selected";
+            animate(oContent, {
+                left: -iNow * iImgWidth
+            });
+        }
+    </script>
+</body>
+</html>

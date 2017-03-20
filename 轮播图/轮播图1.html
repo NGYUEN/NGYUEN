@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #container{
+            width: 800px;
+            /*height: 300px;*/
+            margin: 40px auto;
+            position: relative;
+        }
+        #nav li,#arrows span{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: black;
+            color: #ffffff;
+            line-height: 20px;
+            text-align: center;
+            margin-left: 10px;
+        }
+        #nav li {
+            float: left;
+
+        }
+        #nav li.selected {
+            background: orange;
+        }
+        #nav{
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+        }
+        #arrows{
+            position: absolute;
+            left: 20px;
+            bottom: 10px;
+        }
+        #img a.selected{
+            display: block;
+        }
+        #img a{
+            display: none;
+        }
+        #img img{
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="nav">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <div id="img">
+        <a href="#" class="selected"><img src="image/1.jpg"/></a>
+        <a href="#" ><img src="image/2.jpg"/></a>
+        <a href="#" ><img src="image/3.jpg"/></a>
+        <a href="#" ><img src="image/4.jpg"/></a>
+        <a href="#" ><img src="image/5.jpg"/></a>
+    </div>
+    <div id="arrows">
+        <span>&lt;</span>
+        <span>&gt;</span>
+    </div>
+</div>
+</body>
+</html>
