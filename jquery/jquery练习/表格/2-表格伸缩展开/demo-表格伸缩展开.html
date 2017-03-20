@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table{
+            border: 0;
+            border-collapse: collapse;
+        }
+        td{
+            /*font: normal 12px/17px Arial;*/
+            padding: 2px;
+            width: 100px;
+        }
+        th{
+            /*font: normal 12px/17px Arial;*/
+            text-align: left;
+            padding: 4px;
+            border-bottom: 1px solid #020203;
+            width: 100px;
+        }
+        .parent{
+            background: #ecff3e;
+            cursor: pointer;
+        }
+        .odd{
+            background: #ffffff;
+        }
+        .selected{
+            background: #dd7ad7;
+            color: #ffffff;
+        }
+    </style>
+    <script src="../../../jquery-1.12.4.js" type='text/javascript'></script>
+    <script>
+        $(function(){
+            $('tr.parent').click(function(){
+                $(this).toggleClass('selected').nextUntil('.parent').toggle();
+            })
+        })
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+        </thead>
+        <tbody>
+        <tr class="parent"><td colspan="3">菜单1</td></tr>
+        <tr><td>张山</td><td>男</td><td>浙江宁波</td></tr>
+        <tr><td>李四</td><td>女</td><td>浙江杭州</td></tr>
+
+        <tr class="parent"><td colspan="3">菜单2</td></tr>
+        <tr><td>王五</td><td>男</td><td>湖南长沙</td></tr>
+        <tr><td>找六</td><td>男</td><td>浙江温州</td></tr>
+
+        <tr class="parent"><td colspan="3">菜单3</td></tr>
+        <tr><td>Rain</td><td>男</td><td>浙江杭州</td></tr>
+        <tr><td>MAXMAN</td><td>女</td><td>浙江杭州</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
