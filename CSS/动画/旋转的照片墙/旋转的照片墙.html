@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background: url(img/bg.jpg);
+        }
+        #container .img{
+            width: 125px;
+            height: 125px;
+            border: 5px solid #ffffff;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+            position: absolute;
+            top: -500px;
+            left: -500px;
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+        #container span{
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        (function(){
+            var row = 4,
+                    col = 6,
+                    num = row * col,
+                    thumbWidth = 125,
+                    thumbHeight = 125,
+                    bigImgWidth = 750,
+                    bigImgHeight = 750;
+            var count = 0;
+            var oContainer = document.getElementById("container");
+            for(var i=0; i<num; i++){
+             var oThumbImg = new Image();
+                oThumbImg.onload = function(){
+                    count++;
+                    if(count ==num * 2){
+                        loadSuccess();
+                    }
+                };
+                oThumbImg.src = "img/thumbs/" + (i + 1) + ".jpg";
+
+                var oBigImg = new Image();
+                oBigImg.onload = function(){
+                    count++;
+                    if(count == num * 2){
+                        loadSuccess();
+                    }
+                };
+                oBigImg.src = "img/" + (i + 1) + ".jpg";
+            }
+            function loadSuccess(){
+                var index = 0;
+                for(var i=0; i<row; i++){
+                    for(var j=0; j<col; j++){
+                        index++;
+                        var oDiv = document.createElement("div");
+                        oDiv.style.backgroundImage = "url(img/thumbs/" + index + ".jpg)";
+                        oDiv.className = "img";
+                        oDiv.pos = {
+                            row: i,col: j
+                        };
+                        oDiv.innerHTML = "<span></span>";
+                        oDiv.index = index;
+                        oContainer.appendChild(oDiv);
+                    }
+
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

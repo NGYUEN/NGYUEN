@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border: 0;
+        }
+        body{
+            background: #cccccc;
+            perspective: 1000px;
+            /*perspective-origin: 100% -100%;*/
+        }
+        #container{
+            width: 170px;
+            height: 100px;
+            margin: 50px auto;
+            position: relative;
+            /*-webkit-transform-style: preserve-3d;  -moz-transform-style: preserve-3d;  -ms-transform-style: preserve-3d;  -o-transform-style: preserve-3d;  transform-style: preserve-3d;*/
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <img src="1.png" alt=""/>
+    <img src="2.png" alt=""/>
+    <img src="3.png" alt=""/>
+    <img src="4.png" alt=""/>
+    <img src="5.png" alt=""/>
+    <img src="6.jpg" alt=""/>
+    <img src="7.png" alt=""/>
+    <img src="8.png" alt=""/>
+    <img src="9.png" alt=""/>
+</div>
+    <script>
+        var oContainer = document.getElementById('container');
+        var aImg = oContainer.getElementByTagName('img');
+        for(var i=0; i<aImg.length; i++){
+            var x = -200 * Math.cos(45 * i * Math.PI / 180);
+            var y = -200 * Math.sin(45 * i *  Math.PI / 180);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display:-webkit-box;
+            display:-moz-box;
+        }
+        div{
+            height: 500px;
+        }
+        #left,#right{
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            background: #00ff00;
+        }
+        #center{
+            background: pink;
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="left">left</div>
+    <div id="center">center</div>
+    <div id="right">right</div>
+</body>
+</html>

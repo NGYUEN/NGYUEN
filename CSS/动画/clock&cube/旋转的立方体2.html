@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #cccccc;
+            perspective: 1000px;
+            /*perspective-origin: 100% -100%;*/
+        }
+        #container{
+            width: 200px;
+            height: 200px;
+            /*background: pink;*/
+            position: relative;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            margin: 100px auto;
+            animation: rotate 9s linear infinite;
+        }
+        @-webkit-keyframes rotate{
+             from{
+
+             }
+             to{
+                 -webkit-transform: rotateY(360deg);
+                 -moz-transform: rotateY(360deg);
+                 -ms-transform: rotateY(360deg);
+                 -o-transform: rotateY(360deg);
+                 transform: rotateY(360deg);
+             }
+        }
+        #container2{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /*background: pink;*/
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            top: 50px;
+            left: 50px;
+            -webkit-transform: rotateZ(45deg);
+            -moz-transform: rotateZ(45deg);
+            -ms-transform: rotateZ(45deg);
+            -o-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+            animation: rotate2 4s linear infinite;
+        }
+        @-webkit-keyframes rotate2{
+            from{
+                -webkit-transform: rotateZ(405deg);
+                -moz-transform: rotateZ(405deg);
+                -ms-transform: rotateZ(405deg);
+                -o-transform: rotateZ(405deg);
+                transform: rotateZ(405deg);
+            }
+            to{
+                -webkit-transform: rotateZ(45deg);
+                -moz-transform: rotateZ(45deg);
+                -ms-transform: rotateZ(45deg);
+                -o-transform: rotateZ(45deg);
+                transform: rotateZ(45deg);
+            }
+        }
+        .cube{
+            width: 200px;
+            height: 200px;
+            color: #000;
+            text-align: center;
+            line-height: 200px;
+            font-size: 50px;
+            background: #ffffff;
+            -webkit-border-radius: 5%;
+            -moz-border-radius: 5%;
+            -ms-border-radius: 5%;
+            -o-border-radius: 5%;
+            border-radius: 5%;
+            position: absolute;
+        }
+        .cube2{
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            font-size: 25px;
+            background: blue;
+            -webkit-border-radius: 5%;
+            -moz-border-radius: 5%;
+            -ms-border-radius: 5%;
+            -o-border-radius: 5%;
+            border-radius: 5%;
+            position: absolute;
+        }
+        .one{
+            -webkit-transform: rotateY(180deg) translateZ(100px);
+            -moz-transform: rotateY(180deg) translateZ(100px);
+            -ms-transform: rotateY(180deg) translateZ(100px);
+            -o-transform: rotateY(180deg) translateZ(100px);
+            transform: rotateY(180deg) translateZ(100px);
+            opacity: 0.2;
+        }
+        .two{
+            -webkit-transform: rotateX(90deg) translateZ(100px);
+            -moz-transform: rotateX(90deg) translateZ(100px);
+            -ms-transform: rotateX(90deg) translateZ(100px);
+            -o-transform: rotateX(90deg) translateZ(100px);
+            transform: rotateX(90deg) translateZ(100px);
+            opacity: 0.2;
+        }
+        .three{
+            -webkit-transform: translateZ(100px);
+            -moz-transform: translateZ(100px);
+            -ms-transform: translateZ(100px);
+            -o-transform: translateZ(100px);
+            transform: translateZ(100px);
+            opacity: 0.2;
+        }
+        .four{
+            -webkit-transform: rotateX(-90deg) translateZ(100px);
+            -moz-transform: rotateX(-90deg) translateZ(100px);
+            -ms-transform: rotateX(-90deg) translateZ(100px);
+            -o-transform: rotateX(-90deg) translateZ(100px);
+            transform: rotateX(-90deg) translateZ(100px);
+            opacity: 0.2;
+        }
+        .five{
+            -webkit-transform: rotateY(-90deg) translateZ(100px);
+            -moz-transform: rotateY(-90deg) translateZ(100px);
+            -ms-transform: rotateY(-90deg) translateZ(100px);
+            -o-transform: rotateY(-90deg) translateZ(100px);
+            transform: rotateY(-90deg) translateZ(100px);
+            opacity: 0.2;
+        }
+        .six{
+            -webkit-transform: rotateY(90deg) translateZ(100px);
+            -moz-transform: rotateY(90deg) translateZ(100px);
+            -ms-transform: rotateY(90deg) translateZ(100px);
+            -o-transform: rotateY(90deg) translateZ(100px);
+            transform: rotateY(90deg) translateZ(100px);
+            opacity: 0.2;
+        }
+        .six2{
+            -webkit-transform: rotateY(180deg) translateZ(50px);
+            -moz-transform: rotateY(180deg) translateZ(50px);
+            -ms-transform: rotateY(180deg) translateZ(50px);
+            -o-transform: rotateY(180deg) translateZ(50px);
+            transform: rotateY(180deg) translateZ(50px);
+            opacity: 0.5;
+        }
+        .five2{
+            -webkit-transform: rotateX(90deg) translateZ(50px);
+            -moz-transform: rotateX(90deg) translateZ(50px);
+            -ms-transform: rotateX(90deg) translateZ(50px);
+            -o-transform: rotateX(90deg) translateZ(50px);
+            transform: rotateX(90deg) translateZ(50px);
+            opacity: 0.5;
+        }
+        .four2{
+            -webkit-transform: translateZ(50px);
+            -moz-transform: translateZ(50px);
+            -ms-transform: translateZ(50px);
+            -o-transform: translateZ(50px);
+            transform: translateZ(50px);
+            opacity: 0.5;
+        }
+        .three2{
+            -webkit-transform: rotateX(-90deg) translateZ(50px);
+            -moz-transform: rotateX(-90deg) translateZ(50px);
+            -ms-transform: rotateX(-90deg) translateZ(50px);
+            -o-transform: rotateX(-90deg) translateZ(50px);
+            transform: rotateX(-90deg) translateZ(50px);
+            opacity: 0.5;
+        }
+        .two2{
+            -webkit-transform: rotateY(-90deg) translateZ(50px);
+            -moz-transform: rotateY(-90deg) translateZ(50px);
+            -ms-transform: rotateY(-90deg) translateZ(50px);
+            -o-transform: rotateY(-90deg) translateZ(50px);
+            transform: rotateY(-90deg) translateZ(50px);
+            opacity: 0.5;
+        }
+        .one2{
+            -webkit-transform: rotateY(90deg) translateZ(50px);
+            -moz-transform: rotateY(90deg) translateZ(50px);
+            -ms-transform: rotateY(90deg) translateZ(50px);
+            -o-transform: rotateY(90deg) translateZ(50px);
+            transform: rotateY(90deg) translateZ(50px);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="cube one">1</div>
+        <div class="cube two">2</div>
+        <div class="cube three">3</div>
+        <div class="cube four">4</div>
+        <div class="cube five">5</div>
+        <div class="cube six">6</div>
+        <div id="container2">
+            <div class="cube2 one2">1</div>
+            <div class="cube2 two2">2</div>
+            <div class="cube2 three2">3</div>
+            <div class="cube2 four2">4</div>
+            <div class="cube2 five2">5</div>
+            <div class="cube2 six2">6</div>
+        </div>
+    </div>
+</body>
+</html>

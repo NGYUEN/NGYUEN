@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>accordion</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border: 0;
+        }
+        #container{
+            width: 400px;
+            height: 200px;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .img{
+            border-left: 1px solid #09ff98;
+            width: 78px;
+            height: 200px;
+            float: left;
+            transition: 1s ease 0s;
+            position: relative;
+        }
+        .img div{
+            position: absolute;
+            bottom: 0;
+            width: 355px;
+            height: 20px;
+            color: #ffffff;
+            background: rgba(0,0,0,.5);
+            line-height: 20px;
+        }
+        #container:hover .img{
+            width: 20px;
+        }
+        #container .img:hover{
+            width: 313px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="img"><img src="1.png" alt=""/><div>场景1</div></div>
+        <div class="img"><img src="2.png" alt=""/><div>场景2</div></div>
+        <div class="img"><img src="3.png" alt=""/><div>场景3</div></div>
+        <div class="img"><img src="4.png" alt=""/><div>场景4</div></div>
+        <div class="img"><img src="5.png" alt=""/><div>场景5</div></div>
+    </div>
+</body>
+</html>
