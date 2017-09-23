@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>软件工程</title>
+	<link rel="stylesheet" href="CSS/COMMON.CSS">
+	<link rel="stylesheet" href="CSS/INDEX.CSS">
+	<style>
+		.container{
+			background-color: #105410;
+			width:100%;
+			border-bottom:5px solid white;
+		}
+        .search{
+            width: 280px;
+            float: right;
+            vertical-align: middle;
+            margin-top: -25px;
+        }
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div class="header-top">
+
+			<div class="wrap">
+
+		
+				<h3 class="welcome">欢迎来到软件工程网站！</h3>
+				<ul class="header-top-menu">
+					<li><a href="#">登录</a></li>
+					<li><a href="#">注册</a></li>
+					<li><a href="#">加入收藏</a></li>
+					<li style="border: none;"><a href="#">联系我们</a></li>
+				</ul>
+				<h3 class="tel">服务电话：0512-68653001</h3>
+			</div>
+			<div class="container">
+				<img src="logo.png" alt=""/>
+			</div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="wrap">
+			<ul class="nav-menu">
+				 <li><a href="#">专业介绍</a>
+        <ul class="subNav">
+            <li><a href="#">专业简介</a></li>
+            <li><a href="#">方向简介</a></li>
+        </ul>
+    </li>
+    <li><a href="#">实验室</a>
+        <ul class="subNav">
+            <li><a href="#">923创新实验室</a></li>
+            <li><a href="#">925移动开发实验室</a></li>
+            <li><a href="#">1008实验室</a></li>
+        </ul>
+    </li>
+    <li><a href="#">教师队伍</a>
+        <ul class="subNav"> 
+            <li><a href="#">教授</a></li>
+            <li><a href="#">副教授</a></li>
+            <li><a href="#">讲师</a></li>
+        </ul>
+    </li>
+    <li><a href="#">就业指南</a>
+        <ul class="subNav">
+            <li><a href="#">优秀毕业生</a></li>
+            <li><a href="#">就业分布地域</a></li>
+            <li><a href="#">热门专业</a></li>
+            <li><a href="#">招聘信息</a></li>
+            <li><a href="#">更多</a></li>
+        </ul>
+    </li>
+    <li><a href="#">新闻</a>
+        <ul class="subNav">
+            <li><a href="#">校园大事件</a></li>
+            <li><a href="#">学院要闻</a></li>
+            <li><a href="#">身边事</a></li>
+            <li><a href="#">更多</a></li>
+        </ul>
+    </li>
+            </ul>
+            <div class="search">
+                <input type="txt" value="" size="18" />
+                <input type="button" onclick="search();" value="通知检索"/>
+            </div>
+		</div>
+	</div>
+
+<script>
+window.onload=function(){
+    var aLi=document.getElementsByTagName('li');
+	for(var i=0; i<aLi.length; i++){
+	   aLi[i].onmouseover=function(){
+            var oSubNav=this.getElementsByTagName('ul')[0];
+            if(oSubNav){
+            var This=oSubNav;
+            clearInterval(This.time);
+            This.time=setInterval(function(){
+                    This.style.height=This.offsetHeight+16+"px";
+                    if(This.offsetHeight>=120)
+                    clearInterval(This.time);
+                },30)
+             }
+          }
+        //鼠标离开菜单，二级菜单动画收缩起来。		
+	 aLi[i].onmouseout=function(){
+            var oSubNav=this.getElementsByTagName('ul')[0];
+            if(oSubNav){
+            var This=oSubNav;
+            clearInterval(This.time);
+            This.time=setInterval(function(){
+                    This.style.height=This.offsetHeight-16+"px";
+                    if(This.offsetHeight<=0)
+                    clearInterval(This.time);
+                },30)
+             }
+          }
+		
+	}
+}
+</script>
+	<!--<script src="JS/jquery-1.11.3.min.js"></script>-->
+	<!--<script src="JS/INDEX.JS"></script>-->
+</body>
+</html>

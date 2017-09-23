@@ -1,0 +1,50 @@
+/*****banner样式开始*****/
+#banner{
+	height: 513px;
+	background: #105401;
+	position: relative;
+	overflow: hidden;
+}
+#tab{
+	width: 74px;
+	position: absolute;
+	left: 50%;
+	margin-left: -37px;
+	bottom: 16px;
+	z-index: 1;
+}
+#tab li{
+	width: 14px;
+	height: 14px;
+	background: #fff;
+	border-radius: 14px;
+	float: left;
+	margin-right: 16px;
+	opacity: 0.7;
+	filter: alpha(opacity=50);
+	cursor: pointer;
+}
+#tab li.selected{
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+/*****banner样式结束*****/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

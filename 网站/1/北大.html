@@ -1,0 +1,852 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <base href="http://www.ss.pku.edu.cn/" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="中国最好的软件与微电子学院之一，是按新模式建立、新机制运行的北京大学直属学院。" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>首页 - 北京大学软件与微电子学院</title>
+    <link href="http://www.ss.pku.edu.cn/?view=featured" rel="canonical" />
+    <link href="/index.php?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+    <link href="/index.php?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+    <link href="/templates/sspku_index/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="/media/com_attachments/css/attachments_hide.css" type="text/css" />
+    <link rel="stylesheet" href="/media/com_attachments/css/attachments_list.css" type="text/css" />
+    <link rel="stylesheet" href="http://www.ss.pku.edu.cn/templates/sspku_index/css/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://www.ss.pku.edu.cn/templates/sspku_index/css/template.css" type="text/css" />
+    <link rel="stylesheet" href="http://www.ss.pku.edu.cn/templates/sspku_index/css/slider-show.css" type="text/css" />
+    <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+    <script src="/media/system/js/core.js" type="text/javascript"></script>
+    <script src="/media/com_attachments/js/attachments_refresh.js" type="text/javascript"></script>
+    <script src="/media/system/js/caption.js" type="text/javascript"></script>
+    <script src="/templates/sspku_index/js/jquery.js" type="text/javascript"></script>
+    <script src="/templates/sspku_index/js/respond.min.js" type="text/javascript"></script>
+    <script src="/templates/sspku_index/js/bootstrap.js" type="text/javascript"></script>
+    <script src="/templates/sspku_index/js/jquery.tool.js" type="text/javascript"></script>
+    <script src="/templates/sspku_index/js/jquery.cycle.all.min.js" type="text/javascript"></script>
+    <script src="/templates/sspku_index/js/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.addEvent('load', function() {
+            new JCaption('img.caption');
+        });
+    </script>
+
+    <script type="text/javascript">
+        var timeout         = 500;
+        var closetimer    = 0;
+        var ddmenuitem      = 0;
+        var linkitem = 0;
+
+
+        function jsddm_open()
+        {
+            var item = $('#d_'+$(this).find('a').eq(0).attr('id')).eq(0);
+            jsddm_canceltimer();
+            jsddm_close2(item);
+            ddmenuitem = item
+            if(!$(this).find('a').eq(0).hasClass('top-link-hover')){
+                linkitem = $(this).find('a').eq(0).addClass('top-link-hover');
+            }
+
+            ddmenuitem.fadeIn();
+            ddmenuitem.addClass("show-list");
+        }
+
+        function jsddm_close2(o)
+        {
+            if(ddmenuitem != 0 && ddmenuitem.attr('id') == o.attr('id')){
+                console.log('not close');
+                return;
+            }
+            if(ddmenuitem){
+                linkitem.removeClass('top-link-hover');
+                ddmenuitem.fadeOut();
+                ddmenuitem.removeClass("show-list");
+
+            } }
+
+        function jsddm_close()
+        {
+            if(ddmenuitem){
+                linkitem.removeClass('top-link-hover');
+                ddmenuitem.fadeOut();
+                ddmenuitem.removeClass("show-list");
+
+            } }
+
+        function jsddm_timer()
+        {  closetimer = window.setTimeout(jsddm_close, timeout);}
+
+        function jsddm_canceltimer()
+        {  if(closetimer)
+        {  window.clearTimeout(closetimer);
+            closetimer = null;}}
+
+        $(document).ready(function()
+        {  $('#jsddm > li').bind('mouseover', jsddm_open);
+            $('#jsddm > li').bind('mouseout',  jsddm_timer);
+            $('.d_panel').bind('mouseover',  jsddm_canceltimer);
+            $('.d_panel').bind('mouseout',  jsddm_timer);
+        });
+
+
+        document.onclick = jsddm_close;
+    </script>
+    <style type="text/css">
+        .loadmodules_div > table{
+            width: 100%;
+        }
+        .loadmodules_div > table th{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <ul class="nav">
+            <li class="active"><a href="/">首页</a></li>
+            <li><a href="http://mis.ss.pku.edu.cn/security/login.jsp">教务系统</a></li>
+            <li><a href="http://bbs.ss.pku.edu.cn/">教学论坛</a></li>
+            <li><a href="http://zhaosheng.ss.pku.edu.cn/sum/">招生系统</a></li>
+            <li><a href="http://zslt.ss.pku.edu.cn/">招生论坛</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-target="#">软微邮件<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="http://pub.ss.pku.edu.cn/login.php"><i class="icon-user icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;学生登录</a></li>
+                    <li><a href="http://mail.ss.pku.edu.cn/index.htm"><i class="icon-user icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;教师登录</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav pull-right">
+            <li><a href="/index.php/siteinfo/sitemap">网站地图</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-target="#">快速链接<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="http://www.pku.edu.cn/"><i class="icon-home icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;北大主站</a></li>
+                    <li><a href="/index.php/newscenter"><i class="icon-flag icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;新闻中心</a></li>
+                    <li><a href="/index.php/education"><i class="icon-book icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;教学信息</a></li>
+                    <li><a href="/index.php/admission"><i class="icon-bookmark icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;招生教育</a></li>
+                    <li><a href="/index.php/newscenter/notice"><i class="icon-bullhorn icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;学院公告</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<div id="header" class="header">
+    <div class="header-inner">
+        <div class="container">
+            <div >
+                <div class="pull-left logo">
+                    <a href="#"><img class="logo-img" src="/templates/sspku_index/images/logo-v4.png">
+                        <img class="logo-img-s" src="/templates/sspku_index/images/logo-v4-s.png"></a>
+                </div>
+                <div class="pull-right">
+                    <div class="header-ribbon pull-right">
+                        <a href="/index.php/calendar"><img src="/images/images/99_others/ribbon.png"></img></a>
+                    </div>
+                    <div class="logo-links pull-right">
+                        <a href="http://www.ss.pku.edu.cn/en/" style="position:relative;">English<span style="display: block; position: absolute;font-size: 5px;color: #EC3333;top: -12px;right: 0px;">New</span></a>
+                    </div>
+                    <div class="form-search search-form pull-right">
+                        <div class="my-input-append">
+                            <input id="search-input" type="text" class="search-query search-box-width" placeholder="Search">
+                            <a class="btn btn-warning" onclick="doSearch();"><i class="icon-search"></i>&nbsp;</a>
+                            <input id="search-url" type="hidden" value="/index.php/siteinfo/search">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-nav">
+        <div class="container">
+            <div class="row-fluid">
+                <ul id="jsddm" class="unstyled">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="d_panel_group">
+        <div id="d_tl-overview" class="d_panel">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span4" id="d_tl-overview-div" >
+                    </div>
+                    <div class="span4">
+                        <p class="d_panel_intro">
+                            &nbsp;&nbsp;&nbsp;&nbsp;北京大学软件与微电子学院按照北京大学建设世界一流大学的总体规划，按新模式建立、新机制运行的北京大学的新型学院，学院实行理事会领导下的院长负责制，探索多途径合作办学的管理体制与运行机制，与国内外企业合作，实现培养高层次、实用型、复合交叉型、国际化人才的目标。
+                        </p>
+                    </div>
+                    <div class="span4">
+                        <img class="d_panel_img" src="/templates/sspku_index/images/d_panel_01.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="d_tl-teacher" class="d_panel">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span4" id="d_tl-teacher-div">
+                    </div>
+                    <div class="span4">
+                        <p class="d_panel_intro">
+                            &nbsp;&nbsp;&nbsp;&nbsp;按照建设世界一流大学的总体规划要求，本着建立高起点、国际化北京大学软件学院的目标，软件与微电子学院教师队伍将由国内外知名学者、国内外IT企业资深专家、北京大学校内教师组成。
+                        </p>
+                    </div>
+                    <div class="span4">
+                        <img class="d_panel_img" src="/templates/sspku_index/images/d_panel_02.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="d_tl-research" class="d_panel">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span4" id="d_tl-research-div">
+                    </div>
+                    <div class="span4">
+                        <p class="d_panel_intro">
+                            &nbsp;&nbsp;&nbsp;&nbsp;北京大学软件与微电子学院设有多个科研中心，从单纯教学的领域走向教学科研相结合的领域。学院设立有国际国内合作办公室，与国内外政府机构、高校、企业均开展有全方位、多层次的交流与合作。
+                        </p>
+                    </div>
+                    <div class="span4">
+                        <img class="d_panel_img" src="/templates/sspku_index/images/d_panel_03.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="d_tl-education" class="d_panel">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span4" id="d_tl-education-div">
+                    </div>
+                    <div class="span4">
+                        <p class="d_panel_intro">
+                            &nbsp;&nbsp;&nbsp;&nbsp;软件与微电子学院软件工程专业的课程体系为：多层次、多方向、多领域、模块化 的课程体系。素质教育贯穿学院教学过程始终。学院所有建筑全部实现网络覆盖，包括所有教室、图书馆和宿舍，各类专业实验室支持大型专业课题的实践，开展共享研究项目，支持毕业设计。
+                        </p>
+                    </div>
+                    <div class="span4">
+                        <img class="d_panel_img" src="/templates/sspku_index/images/d_panel_04.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="d_tl-admission" class="d_panel">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span4" id="d_tl-admission-div">
+                    </div>
+                    <div class="span4">
+                        <p class="d_panel_intro">
+                            &nbsp;&nbsp;&nbsp;&nbsp;学院以培养多层次、实用型、复合型、国际化软件与微电子人才为目标。目前拥有软件技术与服务工程、微纳电子与嵌入式系统、金融信息与管理技术、新兴交叉学科4个领域研究方向，同时于2012年起设立工程博士专业学位。
+                        </p>
+                    </div>
+                    <div class="span4">
+                        <img class="d_panel_img" src="/templates/sspku_index/images/d_panel_05.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="d_tl-continueedu" class="d_panel">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span4" id="d_tl-continueedu-div" >
+                    </div>
+                    <div class="span4">
+                        <p class="d_panel_intro">
+                            &nbsp;&nbsp;&nbsp;&nbsp;继续教育中心立足于软件人才市场的需求和多种渠道资源，积极拓展中高端培训市场；立身于学院的精品课程和优秀的师资力量，开展行业和企业培训；立志于信息技术方向的终身教育，培养软件技术和管理人才，服务于信息技术产业和其他行业。
+                        </p>
+                    </div>
+                    <div class="span4">
+                        <img class="d_panel_img" src="/templates/sspku_index/images/d_panel_08.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="d_tl-student" class="d_panel">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span4" id="d_tl-student-div">
+                    </div>
+                    <div class="span4">
+                        <p class="d_panel_intro">
+                            &nbsp;&nbsp;&nbsp;&nbsp;北京大学软件与微电子学院开展有广泛的学生活动，以人才培养为中心，全面贯彻党的教育方针，为全面推进素质教育提供强有力的精神动力和思想保证。学院及时发布大量的最新实习、就业信息，并且提供相关指导，服务同学，努力做到“学有所用、人职匹配、人尽其才”。
+                        </p>
+                    </div>
+                    <div class="span4">
+                        <img class="d_panel_img" src="/templates/sspku_index/images/d_panel_06.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="d_tl-wuxi" class="d_panel">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span4" id="d_tl-wuxi-div">
+                        <img class="d_panel_img" style="margin-right:70px;" src="/templates/sspku_index/images/watermark2.png">
+                    </div>
+                    <div class="span4">
+                        <p class="d_panel_intro">
+                            &nbsp;&nbsp;&nbsp;&nbsp;北京大学软件与微电子学院无锡产学研合作教育基地位于太湖之滨的太湖新城科教产业园内。依托北京大学的综合学科优势和信息学科优势、无锡市和长江三角洲的区域产业优势，面向无锡市和长江三角洲地区产业发展的需要和对IT人才的需求，培养实用型、复合交叉型高端人才。
+                        </p>
+                    </div>
+                    <div class="span4">
+                        <img class="d_panel_img" src="/templates/sspku_index/images/d_panel_07.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span9">
+                <div id="slideshow">
+                    <ul id="nav" style="display: none;">
+                        <li id="prev"><a href="#">Previous</a></li>
+                        <li id="next"><a href="#">Next</a></li>
+                    </ul>
+                    <div id="pager">
+                    </div>
+                    <div id="slides-div">
+                        <div>
+
+
+
+
+                            <ul id="slides">
+
+                                <li>
+                                    <div class="slide-wrapper blue-border">
+                                        <div class="img-wrapper">
+
+
+
+                                            <a
+                                                    href="/index.php/newscenter/news/2581-校党委书记朱善璐一行到软件与微电子学院调研" target="_blank"
+                                                    title="校党委书记朱善璐一行调研软件与微电子学院">
+                                                <img
+                                                        src="http://www.ss.pku.edu.cn/images/images/98_ads/2016.11.1.jpg"
+                                                        alt="校党委书记朱善璐一行调研软件与微电子学院"
+                                                        />
+                                            </a>
+
+
+                                            <div class="img-info">
+                                                <a class="img-title" href="/index.php/newscenter/news/2581-校党委书记朱善璐一行到软件与微电子学院调研">校党委书记朱善璐一行调研软件与微电子学院</a>
+                                                <p class="img-content"></p>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li>
+                                    <div class="slide-wrapper blue-border">
+                                        <div class="img-wrapper">
+
+
+
+                                            <a
+                                                    href="/index.php/newscenter/news/2519-至此成为软微人-北大软微学院迎来2016级新同学" target="_blank"
+                                                    title="北大软微学院迎来2016级新同学">
+                                                <img
+                                                        src="http://www.ss.pku.edu.cn/images/images/98_ads/2016.9.7.4.JPG"
+                                                        alt="北大软微学院迎来2016级新同学"
+                                                        />
+                                            </a>
+
+
+                                            <div class="img-info">
+                                                <a class="img-title" href="/index.php/newscenter/news/2519-至此成为软微人-北大软微学院迎来2016级新同学">北大软微学院迎来2016级新同学</a>
+                                                <p class="img-content"></p>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li>
+                                    <div class="slide-wrapper blue-border">
+                                        <div class="img-wrapper">
+
+
+
+                                            <a
+                                                    href="/index.php/newscenter/news/2565-京南燕园论道会第一期-暨杨芙清院士王阳元院士座谈会圆满结束" target="_blank"
+                                                    title="杨芙清院士、王阳元院士与学院师生座谈">
+                                                <img
+                                                        src="http://www.ss.pku.edu.cn/images/images/98_ads/2016.10.20.jpg"
+                                                        alt="杨芙清院士、王阳元院士与学院师生座谈"
+                                                        />
+                                            </a>
+
+
+                                            <div class="img-info">
+                                                <a class="img-title" href="/index.php/newscenter/news/2565-京南燕园论道会第一期-暨杨芙清院士王阳元院士座谈会圆满结束">杨芙清院士、王阳元院士与学院师生座谈</a>
+                                                <p class="img-content"></p>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li>
+                                    <div class="slide-wrapper blue-border">
+                                        <div class="img-wrapper">
+
+
+
+                                            <a
+                                                    href="/index.php/component/banners/click/8" target="_blank"
+                                                    title="又是毕业季！祝2016届软微毕业生一帆风顺、前程似锦！">
+                                                <img
+                                                        src="http://www.ss.pku.edu.cn/images/images/98_ads/2016.7.7.4.jpg"
+                                                        alt="又是毕业季！祝2016届软微毕业生一帆风顺、前程似锦！"
+                                                        />
+                                            </a>
+
+
+                                            <div class="img-info">
+                                                <a class="img-title" href="/index.php/component/banners/click/8">又是毕业季！祝2016届软微毕业生一帆风顺、前程似锦！</a>
+                                                <p class="img-content"></p>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </li>
+
+
+
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span3">
+                <div class="top-right">
+                    <div class="slogan-img">
+                        <img src="/templates/sspku_index/images/slogan.png"></img>
+                    </div>
+                    <div id="dpart-box">
+                        <div id="dpart">
+                            <div id="dpart-00" class="dpart-div">
+                                <ul class="top-dp-ls">
+                                    <li class="odd"><a id="dpart-01-link" href="/index.php/education/department/department-sedt" style="line-height:1.9em;">软件工程与数据技术系</a></li>
+                                    <li class="even"><a id="dpart-02-link" href="/index.php/education/department/department-nsss" style="line-height:1.9em;">网络软件与系统安全系</a></li>
+                                    <li class="odd"><a id="dpart-03-link" href="/index.php/education/department/department-ieis" style="line-height:1.9em;">集成电路与智能系统系</a></li>
+                                    <li class="even"><a id="dpart-04-link" href="/index.php/education/department/department-fipm" style="line-height:1.9em;">金融信息与工程管理系</a></li>
+                                    <li class="odd"><a id="dpart-05-link" href="/index.php/education/department/department-datc" style="line-height:1.9em;">数字艺术与技术传播系</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span9">
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <div class="loadmodules_div">
+                                <div id="events">
+                                    <div class="section-block  ss-event">
+                                        <div class="section-block-inner">
+                                            <a class="sec-title pull-left" href="/index.php/newscenter/notice">通知公告</a>
+                                            <br style="clear:both;"/>
+                                        </div>
+                                        <div class="title-hr"><div class="title-hr-main"></div></div>
+
+                                        <div class="loadmodules_div latestnewsevents_ ss-event" id="eventslides">
+
+
+
+                                            <div class="event-list">
+                                                <ul class="unstyled">
+                                                    <li class="mod_events_latest_first old-item">
+                                                        <div class="calendar-div pull-left">
+                                                            <h5>16/11</h5>
+                                                            <h4>29</h4>
+                                                        </div>
+                                                        <div class="event-info">
+                                                            <a href="/index.php/newscenter/notice/2597-关于2017年优秀毕业生春季评选工作的通知" title="关于2017年优秀毕业生（春季）评选工作的通知">
+                                                                <p>关于2017年优秀毕业生（春季）评选工作的通知</p>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+
+
+                                                    <li class="mod_events_latest_first old-item">
+                                                        <div class="calendar-div pull-left">
+                                                            <h5>16/11</h5>
+                                                            <h4>24</h4>
+                                                        </div>
+                                                        <div class="event-info">
+                                                            <a href="/index.php/newscenter/notice/2595-关于毕业生春季党员办理党组织关系转出的通知" title="关于毕业生（春季）党员办理党组织关系转出的通知">
+                                                                <p>关于毕业生（春季）党员办理党组织关系转出的通知</p>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+
+
+                                                    <li class="mod_events_latest_first old-item">
+                                                        <div class="calendar-div pull-left">
+                                                            <h5>16/11</h5>
+                                                            <h4>23</h4>
+                                                        </div>
+                                                        <div class="event-info">
+                                                            <a href="/index.php/education/edunotice/2594-关于2017年国家公派留学研究生项目申请辅导讲座的通知" title="关于2017年“国家公派留学研究生项目”申请辅导讲座的通知">
+                                                                <p>关于2017年“国家公派留学研究生项目”申请辅导讲座的通知</p>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+                                            <div class="event-list">
+                                                <ul class="unstyled">
+                                                    <li class="mod_events_latest_first old-item">
+                                                        <div class="calendar-div pull-left">
+                                                            <h5>16/11</h5>
+                                                            <h4>22</h4>
+                                                        </div>
+                                                        <div class="event-info">
+                                                            <a href="/index.php/newscenter/notice/2593-关于2017年1月春季毕业研究生登记表领取的通知双证" title="关于2017年1月（春季）毕业研究生登记表领取的通知（双证）">
+                                                                <p>关于2017年1月（春季）毕业研究生登记表领取的通知（双证）</p>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+
+
+                                                    <li class="mod_events_latest_first old-item">
+                                                        <div class="calendar-div pull-left">
+                                                            <h5>16/11</h5>
+                                                            <h4>17</h4>
+                                                        </div>
+                                                        <div class="event-info">
+                                                            <a href="/index.php/education/edunotice/2591-关于201701硕士论文答辩通过后需要提交材料的通知" title="关于201701硕士论文答辩通过后需要提交材料的通知">
+                                                                <p>关于201701硕士论文答辩通过后需要提交材料的通知</p>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+
+
+                                                    <li class="mod_events_latest_first old-item">
+                                                        <div class="calendar-div pull-left">
+                                                            <h5>16/11</h5>
+                                                            <h4>17</h4>
+                                                        </div>
+                                                        <div class="event-info">
+                                                            <a href="/index.php/education/edunotice/2590-关于预计2017年1月7月毕业的双证研究生电子照片未拍摄者自行补照的通知" title="关于预计2017年1月、7月毕业的双证研究生补照的通知">
+                                                                <p>关于预计2017年1月、7月毕业的双证研究生补照的通知</p>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+                                            <div class="event-list">
+                                                <ul class="unstyled">
+                                                    <li class="mod_events_latest_first old-item">
+                                                        <div class="calendar-div pull-left">
+                                                            <h5>16/11</h5>
+                                                            <h4>14</h4>
+                                                        </div>
+                                                        <div class="event-info">
+                                                            <a href="/index.php/newscenter/notice/2589-海淀区第十六届人民代表大会代表选举投票的通知" title="海淀区第十六届人民代表大会代表选举投票通知">
+                                                                <p>海淀区第十六届人民代表大会代表选举投票通知</p>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+
+
+                                                    <li class="mod_events_latest_first old-item">
+                                                        <div class="calendar-div pull-left">
+                                                            <h5>16/11</h5>
+                                                            <h4>11</h4>
+                                                        </div>
+                                                        <div class="event-info">
+                                                            <a href="/index.php/newscenter/notice/2588-关于北大软微学院第二届创新创业大赛的通知" title="关于北大软微学院第二届创新创业大赛的通知">
+                                                                <p>关于北大软微学院第二届创新创业大赛的通知</p>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+
+
+                                                    <li class="mod_events_latest_first old-item">
+                                                        <div class="calendar-div pull-left">
+                                                            <h5>16/11</h5>
+                                                            <h4>08</h4>
+                                                        </div>
+                                                        <div class="event-info">
+                                                            <a href="/index.php/education/edunotice/2586-1609级新生学生证的领取及老生磁卡充磁的办理" title="1609级新生学生证的领取及老生磁卡充磁的办理">
+                                                                <p>1609级新生学生证的领取及老生磁卡充磁的办理</p>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span8">
+
+                            <div class="main-news" id="main-news">
+                                <div class="section-block  ss_news">
+                                    <div class="section-block-inner">
+                                        <a class="sec-title pull-left" href="/index.php/newscenter">新闻快讯</a>
+                                        <br style="clear:both;"/>
+                                    </div>
+                                    <div class="title-hr"><div class="title-hr-main"></div></div>
+
+                                    <div class="info-list">
+                                        <ul id="info-list-ul" class="unstyled latestnews ss_news">
+
+
+                                            <li>
+                                                <a href="/index.php/newscenter/news/2598-软件与微电子学院组织年终安全卫生大检查" title="软件与微电子学院组织年终安全卫生大检查">
+                                                    <p class="time pull-left ">2016-12-07</p>
+                                                    <p class="info-title">软件与微电子学院组织年终安全卫生大检查</p>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/index.php/newscenter/news/2596-软件与微电子学院校友会召开第三次理事会" title="软件与微电子学院校友会召开第三次理事会">
+                                                    <p class="time pull-left ">2016-11-28</p>
+                                                    <p class="info-title">软件与微电子学院校友会召开第三次理事会</p>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/index.php/newscenter/news/2587-软件与微电子学院学生获2016首届全国高等院校项目管理大赛特等奖" title="软件与微电子学院学生获2016（首届）全国高等院校项目管理大赛特等奖">
+                                                    <p class="time pull-left ">2016-11-10</p>
+                                                    <p class="info-title">软件与微电子学院学生获2016（首届）全国高等院校项目管理大赛特等奖</p>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/index.php/newscenter/news/2581-校党委书记朱善璐一行到软件与微电子学院调研" title="校党委书记朱善璐一行到软件与微电子学院调研">
+                                                    <p class="time pull-left ">2016-11-02</p>
+                                                    <p class="info-title">校党委书记朱善璐一行到软件与微电子学院调研</p>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/index.php/newscenter/news/2570-美国国际科技大学gregoryo’brien校长做硅谷人才需求与教育模式的主题报告" title="Gregory O’Brien做“硅谷人才需求与教育模式”主题报告">
+                                                    <p class="time pull-left ">2016-10-26</p>
+                                                    <p class="info-title">Gregory O’Brien做“硅谷人才需求与教育模式”主题报告</p>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/index.php/newscenter/news/2569-软件与微电子学院学生获2016世界机器人大赛robocup挑战赛二等奖" title="软件与微电子学院学生获2016世界机器人大赛RoboCup挑战赛二等奖">
+                                                    <p class="time pull-left ">2016-10-26</p>
+                                                    <p class="info-title">软件与微电子学院学生获2016世界机器人大赛RoboCup挑战赛二等奖</p>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/index.php/newscenter/news/2565-京南燕园论道会第一期-暨杨芙清院士王阳元院士座谈会圆满结束" title="杨芙清院士、王阳元院士与学院师生座谈">
+                                                    <p class="time pull-left ">2016-10-21</p>
+                                                    <p class="info-title">杨芙清院士、王阳元院士与学院师生座谈</p>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="/index.php/newscenter/news/2563-软件与微电子学院2015-2016学年总结大会圆满召开" title="软件与微电子学院2015-2016学年总结大会圆满召开">
+                                                    <p class="time pull-left ">2016-10-20</p>
+                                                    <p class="info-title">软件与微电子学院2015-2016学年总结大会圆满召开</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <div class="section-block ss-wuxi">
+                                <div class="section-block-inner">
+                                    <a class="sec-title pull-left" href="http://wuxi.ss.pku.edu.cn" target="_blank">无锡基地</a>
+                                    <a class="title-more pull-right" href="http://wuxi.ss.pku.edu.cn" target="_blank">info</a>
+                                    <br style="clear:both;"/>
+                                </div>
+                                <div class="title-hr"><div class="title-hr-main"></div></div>
+                                <div class="sec-img-div">
+                                    <div class="sec-img-div-inner">
+                                        <a href="http://wuxi.ss.pku.edu.cn" target="_blank">
+                                            <img src="/templates/sspku_index/images/wuxi.jpg" class="img-polaroid">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="span8">
+
+                            <div class="main-news">
+                                <div class="section-block  sec-img-div clearfix">
+                                    <div class="section-block-inner">
+                                        <a class="sec-title pull-left">相关链接</a>
+                                        <br style="clear:both;"/>
+                                    </div>
+                                    <div class="title-hr"><div class="title-hr-main"></div></div>
+
+
+
+
+                                    <div class="bannergroup sec-img-div clearfix">
+
+                                        <div class="banneritem">
+                                            <a
+                                                    href="/index.php/newscenter/career" target="_blank"
+                                                    title="诚聘英才">
+                                                <img
+                                                        src="http://www.ss.pku.edu.cn/images/images/98_ads/ad02.jpg"
+                                                        alt="诚聘英才"
+                                                        />
+                                            </a>
+                                            <div class="clr"></div>
+                                        </div>
+                                        <div class="banneritem">
+                                            <a
+                                                    href="/index.php/admission/admbrochure" target="_blank"
+                                                    title="2013招生简章">
+                                                <img
+                                                        src="http://www.ss.pku.edu.cn/images/images/98_ads/ad01.jpg"
+                                                        alt="2013招生简章"
+                                                        />
+                                            </a>
+                                            <div class="clr"></div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 right-span-adjust span-splitter">
+
+                    <div class="section-block ss-links">
+                        <div class="section-block-inner">
+                            <a class="sec-title pull-left" href="/index.php/siteinfo/sitemap">快速通道</a>
+                            <a class="title-more pull-right" href="/index.php/siteinfo/sitemap">sitemap</a>
+                            <br style="clear:both;"/>
+                        </div>
+                        <div class="title-hr"><div class="title-hr-main"></div></div>
+                        <div class="sec-img-div">
+                            <div class="sec-img-div-inner">
+                                <a href="/index.php/siteinfo/sitemap">
+                                    <img src="/templates/sspku_index/images/bridge.jpg" class="img-polaroid">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="quick-links" id="quick-links">
+
+                        </div>
+                    </div>
+
+
+                    <div class="loadmodules_div">
+                        <div>
+                            <ul class="nav menu" id="express-menu">
+                                <li class="item-151 deeper parent"><a href="/index.php/newscenter" >新闻中心</a><ul class="nav-child unstyled small"><li class="item-152"><a href="/index.php/newscenter/news" >学院新闻</a></li><li class="item-153"><a href="/index.php/newscenter/notice" >通知公告</a></li><li class="item-154"><a href="/index.php/newscenter/career" >招聘信息</a></li></ul></li><li class="item-155 deeper parent"><a href="/index.php/education" >教育教学</a><ul class="nav-child unstyled small"><li class="item-158"><a href="/index.php/education/department" >科系设置</a></li><li class="item-156"><a href="/index.php/education/edunotice" >教务通知</a></li><li class="item-157"><a href="/index.php/education/eduevent/cat.listevents/2016/12/07/-" >活动讲座</a></li><li class="item-159"><a href="/index.php/education/library" >图书资料</a></li><li class="item-277"><a href="/index.php/education/collegecalendar" >软微校历</a></li></ul></li><li class="item-161 deeper parent"><a href="/index.php/admission" >招生信息</a><ul class="nav-child unstyled small"><li class="item-163"><a href="/index.php/admission/admbrochure" >招生简章</a></li><li class="item-162"><a href="/index.php/admission/admnotice" >招生通知</a></li><li class="item-164"><a href="http://zhaosheng.ss.pku.edu.cn/sum/" >网上报名</a></li></ul></li><li class="item-165 deeper parent"><a href="/index.php/admcontinue" >继续教育</a><ul class="nav-child unstyled small"><li class="item-281"><a href="/index.php/admcontinue/continueedu-news" >新闻动态</a></li><li class="item-282"><a href="/index.php/admcontinue/continueedu-course" >课程目录</a></li><li class="item-283"><a href="/index.php/admcontinue/continueedu-plan" >招生简章</a></li></ul></li><li class="item-166 deeper parent"><a href="/index.php/student" >学生天地</a><ul class="nav-child unstyled small"><li class="item-167"><a href="/index.php/student/stuaffair" >学生工作</a></li><li class="item-168"><a href="/index.php/student/internjob" >实习就业</a></li><li class="item-169"><a href="/index.php/student/rule" >学生守则</a></li><li class="item-170"><a href="/index.php/student/download" >常用下载</a></li></ul></li><li class="item-225 deeper parent"><a href="/index.php/siteinfo/sitemap" >院内系统</a><ul class="nav-child unstyled small"><li class="item-226"><a href="http://mis.ss.pku.edu.cn/security/login.jsp" >教务系统</a></li><li class="item-231"><a href="http://cms.ss.pku.edu.cn/" >教学平台</a></li><li class="item-227"><a href="http://zhaosheng.ss.pku.edu.cn/sum/" >招生系统</a></li><li class="item-228"><a href="http://bbs.ss.pku.edu.cn/" >教学论坛</a></li></ul></li><li class="item-232 deeper parent"><a href="http://www.pku.edu.cn/schools/yxsz.jsp" >校内链接</a><ul class="nav-child unstyled small"><li class="item-234"><a href="http://grs.pku.edu.cn/" >研究生院</a></li><li class="item-235"><a href="http://www.lib.pku.edu.cn/portal/" >校图书馆</a></li></ul></li></ul>
+                            <ul class="nav menu" id="index-top-menu">
+                                <li class="item-238 deeper parent"><a class="tl-overview" href="/index.php/overview" >学院概况</a><ul class="nav-child unstyled small"><li class="item-239"><a class="d_panel_link" href="/index.php/overview/inscription" >领导致辞</a></li><li class="item-240"><a class="d_panel_link" href="/index.php/overview/organization" >组织机构</a></li><li class="item-241"><a class="d_panel_link" href="/index.php/overview/contact" >联系方式</a></li><li class="item-242"><a class="d_panel_link" href="/index.php/overview/map" >校园地图</a></li></ul></li><li class="item-243 deeper parent"><a class="tl-teacher" href="/index.php/teacherteam" >师资团队</a><ul class="nav-child unstyled small"><li class="item-244"><a class="d_panel_link" href="/index.php/teacherteam/scicommittee" >学术委员会</a></li><li class="item-245"><a class="d_panel_link" href="/index.php/teacherteam/adcommittee" >学位委员会</a></li><li class="item-246"><a class="d_panel_link" href="/index.php/teacherteam/advisercommittee" >顾问委员会</a></li><li class="item-247"><a class="d_panel_link" href="/index.php/teacherteam/guidecommittee" >教学指导委员会</a></li><li class="item-248"><a class="d_panel_link" href="/index.php/teacherteam/supervisorcommittee" >教学督导委员会</a></li><li class="item-249"><a class="d_panel_link" href="/index.php/teacherteam/teacherlist" >师资名单</a></li></ul></li><li class="item-250 deeper parent"><a class="tl-research" href="/index.php/research" >研究合作</a><ul class="nav-child unstyled small"><li class="item-251"><a class="d_panel_link" href="/index.php/research/academic" >科学研究</a></li><li class="item-252"><a class="d_panel_link" href="/index.php/research/fexpert" >外国专家</a></li><li class="item-253"><a class="d_panel_link" href="/index.php/research/cooperation" >合作机构</a></li><li class="item-275"><a class="d_panel_link" href="/index.php/research/cooperationnews" >合作动态</a></li></ul></li><li class="item-254 deeper parent"><a class="tl-education" href="/index.php/education" >教育教学</a><ul class="nav-child unstyled small"><li class="item-297"><a class="d_panel_link" href="/index.php/education/department" >科系设置</a></li><li class="item-255"><a class="d_panel_link" href="/index.php/education/edunotice" >教务通知</a></li><li class="item-296"><a class="d_panel_link" href="/index.php/education/eduevent/cat.listevents/2016/12/07/-" >活动讲座</a></li><li class="item-298"><a class="d_panel_link" href="/index.php/education/library" >图书资料</a></li><li class="item-256"><a class="d_panel_link" href="http://mis.ss.pku.edu.cn/security/login.jsp" >教务系统</a></li><li class="item-269"><a class="d_panel_link" href="http://cms.ss.pku.edu.cn/" >教学平台</a></li><li class="item-257"><a class="d_panel_link" href="/index.php/education/collegecalendar" >软微校历</a></li></ul></li><li class="item-258 deeper parent"><a class="tl-admission" href="/index.php/admission" >招生信息</a><ul class="nav-child unstyled small"><li class="item-259"><a class="d_panel_link" href="/index.php/admission/admnotice" >招生通知</a></li><li class="item-260"><a class="d_panel_link" href="/index.php/admission/admbrochure" >招生简章</a></li><li class="item-261"><a class="d_panel_link" href="http://zhaosheng.ss.pku.edu.cn/sum/" >网上报名</a></li></ul></li><li class="item-262 deeper parent"><a class="tl-continueedu" href="/index.php/admcontinue" >继续教育</a><ul class="nav-child unstyled small"><li class="item-289"><a class="d_panel_link" href="/index.php/admcontinue/continueedu-news" >继续教育动态</a></li><li class="item-290"><a class="d_panel_link" href="/index.php/admcontinue/continueedu-course" >课程目录</a></li><li class="item-291"><a class="d_panel_link" href="/index.php/admcontinue/continueedu-plan" >招生简章</a></li></ul></li><li class="item-263 deeper parent"><a class="tl-student" href="/index.php/student" >学生天地</a><ul class="nav-child unstyled small"><li class="item-264"><a class="d_panel_link" href="/index.php/student/stuaffair" >学生工作</a></li><li class="item-265"><a class="d_panel_link" href="/index.php/student/internjob" >实习就业</a></li><li class="item-266"><a class="d_panel_link" href="/index.php/student/rule" >学生守则</a></li><li class="item-267"><a class="d_panel_link" href="/index.php/student/download" >常用下载</a></li></ul></li><li class="item-268"><a class="tl-wuxi" href="http://wuxi.ss.pku.edu.cn/" >无锡基地</a></li></ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="footer" class="footer">
+    <div class="container">
+        <div class="row-fluid" style="margin-bottom:15px;">
+            <div>
+                <a id="backtotop" href="#" class="back2top pull-right" title="返回顶部">&#9650;<br/>Top</a>
+            </div>
+            <div class="slogan-div pull-left">
+                <blockquote class="slogan" style="float:left;">
+                    <h3>开拓&nbsp;&nbsp;求实&nbsp;&nbsp;创业&nbsp;&nbsp;严谨&nbsp;&nbsp;进取&nbsp;&nbsp;育人</h3></blockquote>
+                <div style="float:left; margin-left:30px;">
+                    <a href="http://www.ss.pku.edu.cn/images/images/99_others/qrcode1.jpg" title="点击查看大图"><img src="http://www.ss.pku.edu.cn/images/images/99_others/qrcode1.jpg" style="width:80px;"></a>
+                </div>
+                <div style="float:left; margin-left:30px;">
+                    <a href="http://www.ss.pku.edu.cn/images/images/99_others/qrcode2.jpg" title="点击查看大图"><img src="http://www.ss.pku.edu.cn/images/images/99_others/qrcode2.jpg" style="width:80px;"></a>
+                </div>
+            </div>
+            <div class="footer-links pull-right" style="width: 350px;">
+                <div>
+                    <ul class="pull-right">
+                        <li><i class="icon-user icon-white icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;关于我们</li>
+                        <li><a href="/index.php/overview/map">校园地图</a></li>
+                        <li><a href="/index.php/overview/contact">联系方式</a></li>
+                        <li><a href="/index.php/siteinfo">版权说明</a></li>
+                        <li style="clear:both;"></li>
+                    </ul>
+                    <br style="clear:both;"/>
+                </div>
+            </div>
+        </div>
+        <hr class="soften" />
+        <div class="row">
+            <div class="span12 copyright">
+                <p>Copyright © 北京大学软件与微电子学院 2013&nbsp;&nbsp;·&nbsp;&nbsp;北京市大兴工业开发区金苑路24号&nbsp;&nbsp;102600</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery("#backtotop").click(function(){
+        jQuery('body,html').animate({scrollTop:0},1000);
+        return false;
+    });
+</script>
+</body>
+</html>

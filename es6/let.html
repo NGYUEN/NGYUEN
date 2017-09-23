@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var a=10;
+    console.log(a);
+    let b=10;
+    console.log(b);
+    //1.let声明的变量没有变量提升
+    console.log(b);
+    let c=10;//出错
+    //2.在es6中引入了块作用域,只针对let和const有效
+    //单独的{}也是作用域
+    {
+        var d=10;
+    }
+    console.log(d);
+    //3.不允许重复声明变量
+    let e = 10;
+    let e = 20;
+    console.log(e);
+    //4.用let声明的变量在他的块级作用域内，只能用它，不允许其他的同名变量进来，即使是全局变量（不允许使用其他同名变量）
+    // -----暂时性的失效区（死去）
+
+    //内部作用域调用外部作用域----因为闭包引起
+    //输出索引问题
+
+
+
+
+</script>
+
+</body>
+</html>

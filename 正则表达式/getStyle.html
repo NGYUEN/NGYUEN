@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <ul id="ul1">
+        <li>111</li>
+        <li class="aa">222</li>
+        <li>333</li>
+        <li>444</li>
+    </ul>
+    <script>
+        function getStyle(className,context){
+            var result= [];
+            context = context||document;
+            if(document.getElementsByClassName){
+                result = context.getElementsByClassName(className);
+            }else{
+                var all = context.getElementsByTagName('*');
+                var reg = new RegExp('\\b'+className+'\\b');
+                for(var i=0; i<all.length; i++){
+                    if(reg.test(all[i].className)){
+                        result.push(all[i]);
+                    }
+                }
+            }
+            return result;
+        }
+        var oUl = document.getElementById('ul1');
+        var arr = getStyle('aa',oUl);
+        for(var i= 0;i<arr.length;i++){
+            arr[i].style.background = 'red';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!--viewport-->
+    <!--content:device-width设备宽度-->
+    <!--user-scalable=no-----对网页进行放大缩小，no,yes,默认yes-->
+    <!--initial-scale=1.0-----初始化的倍数,网页在第一次加载时呈现的倍数-->
+    <!--maximum-scale=1.0, minimum-scale=1.0------允许放大和缩小的最大最小倍数-->
+    <link rel="stylesheet" href="" media="all"/>
+    <!-- media,在相应的情况下加载相应的css文件,动态加载-->
+    <style>
+    /*<给子元素设置border，父元素会一起掉下去：溢出隐藏，绝对定位，border，浮动*/
+    @media print {
+        #div{
+            /**/
+        }
+    }
+    @media (max-width: 767px){
+        /*满足条件执行*/
+    }
+    /*
+        常用断点：
+        breakpoint：1200 992比较早的电脑 768iPad
+    */
+    /*jQuerymodile
+        zepto.js
+        
+        
+    */
+    </style>
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>

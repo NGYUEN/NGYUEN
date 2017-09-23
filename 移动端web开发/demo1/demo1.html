@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <style>
+        /*
+            breakpoint:960 480
+        */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h3{
+            width: 960px;
+            height: 100px;
+            margin: 30px auto;
+            background: #CCCCCC;
+            text-align: center;
+            line-height: 100px;
+        }
+        figure{
+            width: 960px;
+            margin: 0 auto;
+        }
+        figure img{
+            width: 960px;
+        }
+        section{
+            width: 960px;
+            margin: 0 auto;
+        }
+        #left, #right{
+            height: 300px;
+            text-align: center;
+            float: left;
+            /*margin: 0 auto;*/
+            display: table;
+            /*margin-top: -8px;*/
+        }
+        #left p, #right p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #left{
+            width: 630px;
+            background: #ccff11;
+            margin-right: 30px;
+        }
+        #right{
+            width: 300px;
+            background: #1fff1b;
+        }
+        footer{
+            clear: both;
+        }
+        @media(max-width:959px){
+            h3{
+                width: 100%;
+            }
+            section{
+                width: 100%;
+            }
+            #left{
+                width: 67%;
+                margin-right: 3%;
+            }
+            #right{
+                width: 30%;
+            }
+            figure{
+                width: 100%;
+            }
+            figure img{
+                width: 100%;
+                /*max-width: 100%;上限*/
+                /*min-width: 30%;下限*/
+            }
+        }
+        @media(max-width:480px){
+            #right,#left{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>页头</h3>
+    </header>
+    <nav>
+        <h3>导航</h3>
+    </nav>
+    <figure>
+        <img src="01.jpg" alt=""/>
+    </figure>
+    <section>
+        <aside id="left">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam quis magna facilisis, eget feugiat nisi lacinia.</p>
+        </aside>
+        <aside id="right">
+            <p>
+                Donec dolor arcu, interdum sed turpis faucibus, placerat ultricies felis. Donec pulvinar gravida rhoncus. Suspendisse vestibulum est eget dolor lobortis.
+            </p>
+        </aside>
+    </section>
+    <footer>
+        <h3>页脚</h3>
+    </footer>
+</body>
+</html>

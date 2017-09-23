@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        var [a,b] = [1,2];
+        console.log(a,b);
+
+        var [c, ,[d,e=0]] = [1,2,[3,undefined]];
+        console.log(c,d,e);
+
+        var f=10,g=20;
+
+        //1颠倒两个数
+        f = [g,f=g][0];
+
+        //2
+        f = f + g;
+        g = f - g;
+        f = g - g;
+        console.log(f,g);
+
+        //3
+        [f,g] = [g,f];
+
+//        var obj = {
+//            x:1,
+//            y:2
+//        };
+//        var {x,y} = obj;
+
+        var {x,y} = {x:1, y:2};//找同名的属性
+        console.log(x,y);
+
+        var {x:q,y:w} = {x:1, y:2};//x后什么都不写相当于x:x
+        console.log(q,w);
+
+        var {x:r,y:t} = {x:1, y:{z:3}};//x后什么都不写相当于x:x
+        console.log(r,t);
+
+        function fn([a,b]){
+            console.log(a,b);
+        }
+
+
+
+    </script>
+</body>
+</html>

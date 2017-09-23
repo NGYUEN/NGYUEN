@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //const
+    const NUM = 10;//1.定义常量.常量不能改
+    NUM = 5;
+    console.log(NUM);
+
+
+    const OBJ = {
+        name:'as',
+        age:12
+    };
+
+    Object.freeze(OBJ);//冻结，不能改
+    OBJ.name='lisi';
+    console.log(OBJ);
+    //用const声明的常量不能做变量提升
+    //不能重复声明……
+    //除了let声明变量const声明常量，其余属性相同，let有的const也有
+
+
+
+
+</script>
+</body>
+</html>

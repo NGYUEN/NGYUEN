@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>软件工程</title>
+    <link rel="stylesheet" href="css/index1.css">
+    <link rel="stylesheet" href="css/index2.css"/>
+    <link rel="stylesheet" href="css/index3.css"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, ol{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        img{
+            border: 0;
+        }
+        #all-container{
+            position: relative;
+            margin: 0 auto;
+            width: 100%;
+            height: 900px;
+        }
+        #producer{
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            bottom: 10px;
+            margin: auto;
+            background: #1b8000;
+            border: 1px solid #7effb6;
+            text-align: center;
+            line-height: 30px;
+            color: #ffffff;
+            border-radius: 2%;
+        }
+    </style>
+</head>
+<body>
+    <div id="all-container">
+        <div id="header">
+                <div class="wrap">
+                    <h2 class="welcome">欢迎来到软件工程网站！</h2>
+                    <ul class="header-top-menu">
+                        <li><a href="#">登录</a></li>
+                        <li><a href="#">注册</a></li>
+                        <li><a href="#">加入收藏</a></li>
+                        <li style="border: none;"><a href="#">联系我们</a></li>
+                    </ul>
+                    <h3 class="tel">服务电话：0512-68653001</h3>
+            </div>
+        </div>
+        <div id="menu">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="#" class="main-menu">专业介绍</a>
+                        <ul class="subNav">
+                            <li><a href="#">专业简介</a></li>
+                            <li><a href="#">方向简介</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu">实验室</a>
+                        <ul class="subNav">
+                            <li><a href="#">923创新实验室</a></li>
+                            <li><a href="#">925移动开发实验室</a></li>
+                            <li><a href="#">1008实验室</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu">教师队伍</a>
+                        <ul class="subNav">
+                            <li><a href="#">教授</a></li>
+                            <li><a href="#">副教授</a></li>
+                            <li><a href="#">讲师</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="main-menu">就业指南</a>
+                        <ul class="subNav">
+                            <li><a href="#">优秀毕业生</a></li>
+                            <li><a href="#">就业分布地域</a></li>
+                            <li><a href="#">热门专业</a></li>
+                            <li><a href="#">招聘信息</a></li>
+                            <li><a href="#">更多</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="main-menu">新闻</a>
+                        <ul class="subNav">
+                            <li><a href="#">校园大事件</a></li>
+                            <li><a href="#">学院要闻</a></li>
+                            <li><a href="#">身边事</a></li>
+                            <li><a href="#">更多</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="search">
+                    <input type="text" value="" size="18" />
+                    <input type="button" onclick="search();" value="通知检索"/>
+                </div>
+        </div>
+        <div id="introduce">
+            <div id="title2">专业介绍</div>
+            <div id="content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;培养目标、就业方向：本专业以IT业需求为导向、以卓越人才培养规范要求和工程教育与认证为依据，培养具有扎实软件工程专业知识和熟练专业技能、良好的外语应用能力、较强的团队协作精神及技术创新能力、良好的职业素养和国际竞争力的工程型卓越人才。本专业毕业生能够从事软件工程师、软件测试工程师、软件架构工程师、软件分析师等职业，同时也可以到大专院校、科研院所、企事业单位，特别是服务外包企业等从事软件设计、开发与管理等工作。本专业拥有软件工程学科一级硕士点，学习成绩优秀的本科生可推荐免试攻读硕士和博士学位。</div>
+        </div>
+        <div id="new-container">
+            <div id="listnew1">
+                <h2 class="I_h2">
+                    <div id="tab1">
+                        <span class="on" id="T1">新&nbsp;闻&nbsp;中&nbsp;心<b>NEWS&nbsp;OF&nbsp;COLLEGE</b><a class="aa" href="pages/ListAllNews.jsp" title="">+more</a></span>
+                    </div>
+                </h2>
+                <div id="tablist1">
+                    <ul>
+                        <div id="listnews1">
+                            <!--后台调用处开始-->
+                            <!--样式：<li><span class="Title"><a class="aa"   href="ListContent?type=news-data[i].id" target="_blank" id="news-data[i].id" onclick=sendid($(this).attr("id"))>data[i].title</a></span>data[i].date;</p>-->
+                            <li><span class="Title"><a  class="aa" href="#" target="_blank">某某集团2012年度总结表彰大会暨尾牙晚宴举行</a></span>QQQQ</li>
+                            <!--后台调用处结束-->
+                        </div>
+                    </ul>
+                    <ul style="display:none;">
+                    </ul>
+                </div>
+            </div>
+            <div id="listnew2">
+                <h2 class="I_h2">
+                    <div id="tab2">
+                        <span class="on" id="T2">公&nbsp;告&nbsp;通&nbsp;知<b>NEWS&nbsp;OF&nbsp;COLLEGE</b><a  class="aa" href="pages/ListAllAnno.jsp" title="">+more</a></span>
+                    </div>
+                </h2>
+                <div id="tablist2">
+                    <ul>
+                        <div id="listanno2">
+                            <!--后台调用处开始-->
+                            <!--样式：/*<li><span class="Title"><a class="aa"  href="ListContent?type=anno-data[i].id" target="_blank" id="anno-data[i].id" onclick=sendid($(this).attr("id"))>data[i].title</a></span>data[i].date;</p>*/-->
+                            <li><span class="Title"><a  class="aa" href="#" target="_blank">某某集团2012年度总结表彰大会暨尾牙晚宴举行</a></span>QQQQ</li>
+                            <!--后台调用处结束-->
+                        </div>
+                    </ul>
+                    <ul style="display:none;">
+                    </ul>
+                </div>
+            </div>
+            </div>
+        <div id="img-container">
+            <div id="img-container2">
+                <div id="img">
+                    <img src="img/2.png" alt="">
+                    <img src="img/3.png" alt="">
+                    <img src="img/4.png" alt="">
+                    <img src="img/5.png" alt="">
+                    <img src="img/6.png" alt="">
+                </div>
+            </div>
+            <img src="img/prev.png" id="prev" alt=""/>
+            <img src="img/next.png" id="next" alt=""/>
+        </div>
+        <div id="producer">制作者</div>
+    </div>
+    <script src="js/index1.js"></script>
+    <script src="js/index3.js"></script>
+</body>
+</html>

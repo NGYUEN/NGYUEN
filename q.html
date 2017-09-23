@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table{
+            width: 600px;
+            height: 150px;
+            border-right:1px solid #000;
+            border-bottom:1px solid #000;
+
+        }
+        table td{
+            border-left:1px solid #000;
+            border-top:1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <table width="400" border="0" cellspacing="1" cellpadding="0">
+        <tr>
+            <td>名字</td>
+            <td>性别</td>
+            <td>成绩</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>男</td>
+            <td>77</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>女</td>
+            <td>87</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>未知</td>
+            <td>50</td>
+        </tr>
+    </table>
+    <script src="jquery/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            //存入点击列的每一个TD的内容；
+            var aTdCont = [];
+
+            //点击列的索引值
+            var thi = 0;
+
+            //重新对TR进行排序
+            var setTrIndex = function(tdIndex){
+                for(i=0;i<aTdCont.length;i++){
+                    var trCont = aTdCont[i];
+                    $("tbody tr").each(function() {
+                        var thisText = $(this).children("td:eq("+tdIndex+")").text();
+                        if(thisText == trCont){
+                            $("tbody").append($(this));
+                        }
+                    });
+                }
+            }
+            //比较函数的参数函数
+            var compare_down = function(a,b){
+                return a-b;
+            }
+            var compare_up = function(a,b){
+                return b-a;
+            }
+            //比较函数
+            var fSort = function(compare){
+                aTdCont.sort(compare);
+            }
+            //取出TD的值，并存入数组,取出前二个TD值；
+            var fSetTdCont = function(thIndex){
+                $("tbody tr").each(function() {
+                    var tdCont = $(this).children("td:eq("+thIndex+")").text();
+                    aTdCont.push(tdCont);
+                });
+            }
+            //点击时需要执行的函数
+            var clickFun = function(thindex){
+                aTdCont = [];
+                //获取点击当前列的索引值
+                var nThCount = thindex;
+                //调用sortTh函数 取出要比较的数据
+                fSetTdCont(nThCount);
+            }
+            //点击事件绑定函数
+            $("th").toggle(function(){
+                thi= $(this).index();
+                clickFun(thi);
+                //调用比较函数,降序
+                fSort(compare_up);
+                //重新排序行
+                setTrIndex(thi);
+            },function(){
+                clickFun(thi);
+                //调用比较函数 升序
+                fSort(compare_down);
+                //重新排序行
+                setTrIndex(thi);
+            })
+        })
+
+    </script>
+</body>
+</html>

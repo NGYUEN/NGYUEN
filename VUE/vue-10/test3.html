@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .yellow{
+            width: 200px;
+            height: 200px;
+            background: #ffff00;
+        }
+        .font{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <button @click="change">点击</button>
+    <div v-bind:class="classObj">sss</div>
+</div>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            classObj:{
+                yellow:true,
+                font:true
+            }
+        },
+        methods:{
+            change: function(){
+                vm.classObj.yellow = !vm.classObj.yellow;
+            }
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+//    var Btn = document.getElementsByTagName('button');
+//    var flag = true;
+//    Btn.onclick = function(){
+//        flag = !flag;
+//        vm.classObj.yellow = flag;
+//
+//    }
+</script>
+</body>
+</html>

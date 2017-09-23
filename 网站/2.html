@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*@charset "utf-8";*/
+        /* CSS Document */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .Title{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            float: left;
+            /*display: inline;*/
+            overflow: hidden;
+            text-aligN: left!important;
+        }
+        a{
+            /*text-decoration: none;*/
+            font-size: 14px;
+            color: #444444;
+        }
+        a:hover,.Sy{
+            color: #085986!important;
+        }
+        #listnews1,#tablist1{
+            float: left;
+            width: 350px;
+            overflow: hidden;
+            margin-top: 14px;
+            margin-left: 20px;
+            display: inline;
+            height: 165px;
+            padding-left: 20px;
+        }
+        #listnews1,#listanno1{
+            /*float: left;*/
+            /*width: 358px;*/
+            /*overflow: hidden;*/
+            /*margin-top: 14px;*/
+            /*margin-left: 20px;*/
+            /*display: inline;*/
+            /*height: 165px;*/
+            /*padding-left: 20px;*/
+        }
+        .I_h2{
+            height: 26px;
+            border-bottom: 2px solid #29b7ff;
+            line-heighT: 26px;
+            color: #171890;
+            font-size: 20px;
+            margin-bottom: 12px;
+            position: relative;
+            font-weight: 100;
+        }
+        .I_h2 a{
+            float: right;
+            margin-top: 3px;
+        }
+        .I_h2 div{
+            float: left;
+            widtH: 110px;
+            height: 28px;
+            background: #29ccff;
+        }
+        .I_h2 div span{
+            font-family: 微软雅黑;
+            float: left;
+            width: 105px;
+            text-align: center;
+            /*color: #fff;*/
+            line-heighT: 28px;
+            height: 28px;
+            cursor: pointer;
+            overflow: hidden;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .I_h2 div b{
+            font-family: 微软雅黑;
+            font-size: 13px;
+            position: absolute;
+            left: 120px;
+            color: #105410;
+            font-weight: bold;
+            display: none;
+            top: 3px;
+            line-heighT: 26px;
+        }
+        .I_h2 div a{
+            font-family: 微软雅黑;
+            position: absolute;
+            left: 280px;
+            top: -3px;
+            display: none;
+            color: #08adff;
+            font-size: 18px;
+            font-weight: 200;
+        }
+        .I_h2 div span.on a,.I_h2 div span.on b{
+            display: block;
+        }
+        #tablist1 ul{
+            font-family: 宋体;
+            width: 358px;
+            overflow: hidden;
+        }
+        #tablist1 ul li{
+            float: left;
+            width: 358px;
+            overflow: hidden;
+            height: 23px;
+            line-heighT: 23px;
+            text-align: right;
+            border-bottom: 2px dotted #105410;
+        }
+        #tablist1 ul li .Title{
+            width: 256px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="listnews1">
+        <h2 class="I_h2">
+            <div id="tab1">
+                <span class="on" id="T1">专&nbsp;业&nbsp;新&nbsp;闻<b>NEWS&nbsp;OF&nbsp;COLLEGE</b><a href="pages/ListAllNews.jsp" title="">+more</a></span>
+            </div>
+        </h2>
+        <div id="tablist1">
+            <ul>
+                <div id="listnews">
+                    <!--后台调用处开始-->
+                    <!--样式：<li><span class="Title"><a href="ListContent?type=news-data[i].id" target="_blank" id="news-data[i].id" onclick=sendid($(this).attr("id"))>data[i].title</a></span>data[i].date;</p>-->
+                    <li><span class="Title"><a href="#" target="_blank">某某集团2012年度总结表彰大会暨尾牙晚宴举行</a></span>QQQQ</li>
+                    <!--后台调用处结束-->
+                </div>
+            </ul>
+            <ul style="display:none;">
+            </ul>
+        </div>
+    </div>
+    <div id="listnews2">
+        <!--<h2 class="I_h2">-->
+            <!--<div id="tab2">-->
+                <!--<span class="on" id="T2">专&nbsp;业&nbsp;公&nbsp;告<b>NEWS&nbsp;OF&nbsp;COLLEGE</b><a href="pages/ListAllAnno.jsp" title="">+more</a></span>-->
+            <!--</div>-->
+        <!--</h2>-->
+        <!--<div id="tablist2">-->
+            <!--<ul>-->
+                <!--<div id="listanno">-->
+                    <!--&lt;!&ndash;后台调用处开始&ndash;&gt;-->
+                    <!--&lt;!&ndash;样式：/*<li><span class="Title"><a href="ListContent?type=anno-data[i].id" target="_blank" id="anno-data[i].id" onclick=sendid($(this).attr("id"))>data[i].title</a></span>data[i].date;</p>*/&ndash;&gt;-->
+                    <!--<li><span class="Title"><a href="#" target="_blank">某某集团2012年度总结表彰大会暨尾牙晚宴举行</a></span>QQQQ</li>-->
+                    <!--&lt;!&ndash;后台调用处结束&ndash;&gt;-->
+                <!--</div>-->
+            <!--</ul>-->
+            <!--<ul style="display:none;">-->
+            <!--</ul>-->
+        <!--</div>-->
+    </div>
+</body>
+</html>

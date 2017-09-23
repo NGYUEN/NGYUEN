@@ -1,0 +1,39 @@
+#img-container{
+    position: absolute;
+    top: 615px;
+    margin: auto;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+#img-container2{
+position: absolute;
+width: 100%;
+height: 250px;
+border: 1px dotted #26edff;
+overflow: hidden;
+}
+#img{
+    width: 2095px;
+    height: 250px;
+    position: absolute;
+    right: 30px;
+    left: 0;
+    margin: auto;
+}
+#img img{
+    height: 230px;
+    float: left;
+    padding: 5px;
+}
+#prev,#next{
+    height: 250px;
+    cursor: pointer;
+    position: absolute;
+}
+#prev{
+    left: 0;
+}
+#next{
+    right: 0;
+}

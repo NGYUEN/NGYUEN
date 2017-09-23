@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        name:<input type="text" v-model="msg.name"/>
+        age:<input type="text" v-model="msg.age"/>
+        <button @click="add">add</button>
+        <ul>
+            {{arr}}
+            <!--<li v-model="name"></li><li v-model="age"></li><button @click="del">del</button>-->
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                name:"",
+                age:"",
+                arr:[]
+            },
+            methods:{
+                add: function(){
+//                    this.msg.push(this.arr);
+//                    Vue.set(操作哪个数组，操作的哪个元素，变成什么)
+
+                },
+                del: function(){
+
+                }
+            }
+        })
+    </script>
+</body>
+</html>

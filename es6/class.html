@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //class
+    class User{//
+        constructor(name){
+            this.name = name;
+        }
+        say(){
+            console.log(this.name);//this指向就近的对象
+        }
+    }
+    var u1 = new User('as');
+    u1.say();
+    var u2 = new User('ss');
+    u2.say();
+    //继承
+    function Son(){
+
+    }
+    class Son extends User{
+        constructor(name,age){
+            super(name);//编译器不支持此语法，不是语法错误
+            this.age = age;
+        }
+       static eat(){//加上static生命周期会发生改变，只要有类就有了这个方法，属于这个类
+            console.log(eating);//this指向就近的对象
+        }
+    }
+    var s2 = new Son('ww',12);
+    s2.eat();
+    s2.say();
+</script>
+</body>
+</html>

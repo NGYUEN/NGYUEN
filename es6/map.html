@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //map 也是一个对象
+    var map = new Map();
+    map.set('a',1);//类比php中关联数组
+    map.set('b',2);
+    //键里不止可以基础数据类型，还可以是引用数据类型
+    var arr = [1,2,3];
+    map.set(arr,3);
+    console.log(map);//输出的是一个对象
+    //必须通过map.get取
+    map.set('a',5);//相当于重新给a赋值
+//    map.delete('a');
+    //    map.clear();
+    console.log(map.get('a'));
+    console.log(map.get(arr));
+    console.log(map.keys());
+
+    var keys = map.keys();
+    var values = map.values();
+    for( var key of keys){
+//        console.log(key);
+        console.log(map.get(key));
+    }
+
+    //常用的map遍历方式
+    map.forEach(function(value,key){//先写value后写key
+        console.log(value+','+key);//匿名函数
+    });
+
+
+//    map.forEach((value,key)=>console.log(value+','+key));//如果不是一条语句，要加{}
+
+
+
+</script>
+</body>
+</html>

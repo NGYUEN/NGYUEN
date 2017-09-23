@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul>
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+</ul>
+<script>
+//    var arr = new Array(3);//长度为3的数组
+//    var arr =[3];
+    var arr = Array.of(3);
+    console.log(arr);
+
+
+    //Array.from()
+    var obj = {
+        0:'aa',//name:'aa',输出undefined
+        1:'bb',
+        length:2//加上length就可以输出数组，只要对象有length属性就好用
+    };
+    console.log(Array.from(obj));
+
+
+    var aLi = document.getElementsByTagName('li');//不是真的数组，.push不能用
+    console.log(Array.from(aLi));//是数组
+
+    var arr1 = ["a","b","c","d","e","f"];
+            // ["a","b","d","e","e","f"]
+    arr1.copyWithin(2,3,5);//从第二个开始变，copy3-5,不包括5,从第二个开始覆盖，copy几个覆盖几个
+    //第一个参数：被替换开始坐标，第二个参数复制开始坐标，第三个参数复制结束坐标（不包括）
+    console.log(arr);
+
+
+    //fill()
+    arr1.fill(10,3,5);//a,b,c,10,10,f
+    //1.插入的2.从哪个开始3.到哪个结束
+    console.log(arr1);
+
+
+    //splice()
+    arr1.splice(1);//只有一个值时会把数组的长度变成这个值
+    console.log(arr1);
+    arr1.splice(3,2,10);//a,b,c,10,f
+
+
+    //find()
+    var arr2 = [1,2,3,4,5,6,7,8];
+    var val = arr2.find(function(value,index,aa){
+        return index>3;//输出第一次满足return值得值
+    });
+    var val1 = arr2.findIndex(function(value,index,aa){//返回的永远是索引
+        return index>3;//输出第一次满足return值得值
+    });
+    console.log(val);
+    console.log(val1);
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

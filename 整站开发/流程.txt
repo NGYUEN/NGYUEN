@@ -1,0 +1,23 @@
+1、规划项目的目录结构
+2、分析psd：
+    (1) 分析分为几个部分
+    (2) 哪些部分需要做成css sprite(css精灵)
+    (3) 哪些功能需要封装成组件
+    (4) 需要引入哪些外部的组件或文件
+3、需要给后端人员预留端口
+4、与产品经理或用户沟通网站需要的浏览器版本以及是否需要兼容移动端
+https://tinypng.com在线压缩图片
+https://SegmentFauit.com提问
+框架：bootstrap，nodejs，agularJS,prototype.jquery
+网站：样式https://themeforest.net
+tool.oschina.net  压缩代码
+https://www.csscomressor.com
+软件：FileZilla
+keyword
+description
+网页图标：<link rel="shortcut icon" href="images/favicon.ico">
+        favicon在线制作
+站长工具
+13136666328
+amaze ui
+adminex

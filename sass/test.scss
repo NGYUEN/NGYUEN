@@ -1,0 +1,22 @@
+body{
+  background: #ff3643;
+  @mixin border($color1:#ccc,$color2:#ddd){//可以传值，可以设定默认值
+    border:1px solid $color1;
+    border-radius:5px;
+    box-shadow:4px 5px 2px 3px $color2;
+  }
+  .aa{
+    @include border(red,green);
+  }
+
+  @mixin css3($attr,$val){
+    -webkit-#{$attr}:$val;
+    -mozt-#{$attr}:$val;
+    -ms-#{$attr}:$val;
+    -o-#{$attr}:$val;
+    #{$attr}:$val;
+  }
+  .bb{
+    @include css3(border-radius,4px);
+  }
+}
